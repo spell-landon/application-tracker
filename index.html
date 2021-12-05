@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/nolan/96/new-job.png"
+      type="image/x-icon"
+    />
+
+    <title>Job Application Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./fontawesome-free-5.15.1-web/css/all.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Main Header Area -->
+    <header>
+      <h1>Track Your Job Search</h1>
+      <button class="new-item" id="add-new-item">+ Add New Item</button>
+    </header>
+    <!-- Filter Label Section -->
+    <div class="label-container">
+      <div class="filter-labels">
+        <button class="filter-date">Date <i class="fas fa-filter"></i></button>
+        <button class="filter-time">Time <i class="fas fa-filter"></i></button>
+        <button class="filter-company">
+          Company <i class="fas fa-filter"></i>
+        </button>
+        <button class="filter-interviewer">
+          Interviewer <i class="fas fa-filter"></i>
+        </button>
+        <button class="filter-job-title">
+          Job Title <i class="fas fa-filter"></i>
+        </button>
+        <button class="filter-job-description">
+          Job Description <i class="fas fa-filter"></i>
+        </button>
+        <button class="filter-second-interview">
+          Second Interview <i class="fas fa-filter"></i>
+        </button>
+        <button class="filter-salary">
+          Salary <i class="fas fa-filter"></i>
+        </button>
+        <button class="filter-remote">
+          Remote <i class="fas fa-filter"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Add New Item Modal -->
+    <div class="hidden" id="modal">
+      <div id="modal-textbox">
+        <div class="modal-top-section">
+          <h2 class="title">Track A New Job Interview</h2>
+          <button class="close"><i class="far fa-window-close"></i></button>
+        </div>
+        <form class="job-inputs">
+          <!-- DATE -->
+          <label for="input-date" class="date">Interview Date: </label>
+          <input type="date" id="input-date" required />
+
+          <!-- TIME -->
+          <label for="input-time" class="time">Interview Time: </label>
+          <input type="time" id="input-time" required />
+
+          <!-- COMPANY -->
+          <label for="input-company" class="company">Company: </label>
+          <input type="text" id="input-company" required />
+          <!-- INTERVIEWER -->
+          <label for="input-interviewer" class="interviewer"
+            >Interviewer Name:
+          </label>
+          <input type="text" id="input-interviewer" required />
+          <!-- JOB TITLE -->
+          <label for="input-job-title" class="job-title">Job Title: </label>
+          <input type="text" id="input-job-title" required />
+          <!-- JOB DESCRIPTION -->
+          <label for="input-job-description" class="job-description"
+            >Job Description:
+          </label>
+          <input type="text" id="input-job-description" required />
+          <!-- SALARY -->
+          <label for="input-salary" class="salary">Salary: </label>
+          <input type="number" id="input-salary" required />
+          <!-- REMOTE -->
+          <label for="input-remote" class="remote"
+            >Option For Remote Work?
+          </label>
+          <div class="remote-work-container">
+            <div class="remote-yes">
+              <input
+                type="radio"
+                name="remote"
+                id="input-remote-yes"
+                value="Yes"
+              />
+              <label for="input-remote-yes">Yes</label>
+            </div>
+            <div class="remote-no">
+              <input
+                type="radio"
+                name="remote"
+                id="input-remote-no"
+                value="No"
+              />
+              <label for="input-remote-no">No</label>
+            </div>
+          </div>
+          <!-- SECOND INTERVIEW -->
+          <label for="input-second-interview" class="second-interview"
+            >Did You Get Asked To Come Back For A Second Interview?
+          </label>
+          <div class="second-interview-container">
+            <div class="second-interview-yes">
+              <input
+                type="radio"
+                name="second-interview"
+                id="second-interview-yes"
+                value="Yes"
+              />
+              <label for="second-interview-yes">Yes</label>
+            </div>
+            <div class="second-interview-no">
+              <input
+                type="radio"
+                name="second-interview"
+                id="second-interview-no"
+                value="No"
+              />
+              <label for="second-interview-no">No</label>
+            </div>
+          </div>
+        </form>
+        <div class="submit-form">
+          <button id="create-button-modal">Create New Job Search Item</button>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="added-item-in-table"></div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+html {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+body {
+  height: 100vh;
+  margin: auto;
+  padding: 1rem;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 1;
+  position: static;
+  top: 0;
+  width: 100%;
+}
+.new-item {
+  background-color: #e3ffde;
+  border: none;
+  box-shadow: 0px 2px 5px 0px #dedede;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.new-item:hover {
+  background-color: #cefdc6;
+}
+.new-item:active {
+  background-color: #daffd3;
+}
+.label-container {
+  max-width: 2000px;
+  background-color: #ffffff;
+  margin: auto;
+  position: relative;
+}
+.filter-labels {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.filter-labels > button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.filter-labels > button > i {
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  opacity: 0;
+  transition: all 0.1s ease-in;
+}
+.filter-labels > button:hover i {
+  opacity: 1;
+}
+/* MODAL SECTION */
+#modal {
+  background-color: rgba(180, 180, 180, 0.4);
+  backdrop-filter: blur(1px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+  transition: all 0.1s ease;
+}
+#modal-textbox {
+  background-color: white;
+  height: 800px;
+  max-width: 800px;
+  border-radius: 20px;
+  margin: 20vh auto;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 5px 0px #c5c5c5;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.submit-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+#modal-textbox > .submit-form > #create-button-modal {
+  background-color: #e3ffde;
+  border: none;
+  box-shadow: 0px 2px 5px 0px #dedede;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 1rem;
+}
+#modal-textbox > .submit-form > #create-button-modal:hover {
+  background-color: #cefdc6;
+}
+#modal-textbox > .submit-form > #create-button-modal:active {
+  background-color: #daffd3;
+}
+.modal-top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.modal-top-section > h2 {
+  font-size: 18px;
+}
+.modal-top-section > button {
+  border: none;
+  font-size: 30px;
+  margin-top: -2px;
+  background: none;
+  color: rgb(0, 10, 101);
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+.modal-top-section > button:hover {
+  color: rgb(226, 59, 59);
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.show-modal {
+  visibility: visible;
+  opacity: 1;
+}
+.job-inputs {
+  display: flex;
+  flex-direction: column;
+}
+.job-inputs > label {
+  font-size: 16px;
+}
+.job-inputs > input {
+  margin: 10px 0;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.second-interview-container > div {
+  padding-left: 10px;
+  margin: 10px auto;
+}
+.remote-work-container > div {
+  padding-left: 10px;
+  margin: 10px auto;
+}
+
+/* END MODAL SECTION */
+/* Each added item */
+.added-item-in-table {
+  background-color: #f5f5f5;
+  max-width: 2000px;
+  height: 25px;
+  margin: 10px auto;
+  display: flex;
+  border-radius: 5px;
+}
