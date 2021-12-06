@@ -28,7 +28,7 @@
       <h1>Track Your Job Search</h1>
       <button class="new-item" id="add-new-item">+ Add New Item</button>
     </header>
-    <!-- Filter Label Section -->
+    <!-- Filter Label Section
     <div class="label-container">
       <div class="filter-labels">
         <button class="filter-date">Date <i class="fas fa-filter"></i></button>
@@ -55,7 +55,7 @@
           Remote <i class="fas fa-filter"></i>
         </button>
       </div>
-    </div>
+    </div> -->
     <!-- Add New Item Modal -->
     <div class="hidden" id="modal">
       <div id="modal-textbox">
@@ -66,7 +66,7 @@
         <form class="job-inputs">
           <!-- DATE -->
           <label for="input-date" class="date">Interview Date: </label>
-          <input type="date" id="input-date" required />
+          <input type="date" id="input-date" required autofocus />
 
           <!-- TIME -->
           <label for="input-time" class="time">Interview Time: </label>
@@ -140,13 +140,18 @@
             </div>
           </div>
         </form>
-        <div class="submit-form">
-          <button id="create-button-modal">Create New Job Search Item</button>
-        </div>
+
+          <button type="submit" id="create-button-modal">Create New Job Search Item</button>
+
       </div>
     </div>
     <main>
+      <!-- <div class="added-item-in-table"></div>
       <div class="added-item-in-table"></div>
+      <div class="added-item-in-table"></div>
+      <div class="added-item-in-table"></div>
+      <div class="added-item-in-table"></div>
+      <div class="added-item-in-table"></div> -->
       <table class="table-sortable">
         <thead>
           <tr>
@@ -163,15 +168,15 @@
         </thead>
         <tbody>
           <tr>
-            <td>12/65/21</td>
-            <td>9:00pm</td>
-            <td>Google</td>
-            <td>Mr. Marquee</td>
-            <td>Software Engineer</td>
-            <td>Coding Things</td>
-            <td>Yes</td>
-            <td>$80,000</td>
-            <td>No</td>
+            <td id="td-date">12/65/21</td>
+            <td id="td-time">9:00pm</td>
+            <td id="td-company">Google</td>
+            <td id="td-interviewer">Mr. Marquee</td>
+            <td id="td-job-title">Software Engineer</td>
+            <td id="td-job-description">Coding Things</td>
+            <td id="td-second-interview">Yes</td>
+            <td id="td-salary">$80,000</td>
+            <td id="td-remote">No</td>
           </tr>
           <tr>
             <td>1/10/22</td>
@@ -187,7 +192,8 @@
         </tbody>
       </table>
     </main>
-
+<!-- ADD "POSITION FILLED" BUTTON AND GREY OUT THE ITEM -->
+<!-- ADD "EDIT" BUTTON TO EDIT THE ITEM -->
     <script src="./script.js"></script>
   </body>
 </html>

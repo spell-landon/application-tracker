@@ -93,18 +93,22 @@ header {
   justify-content: center;
   margin-top: 1rem;
 }
-#modal-textbox > .submit-form > #create-button-modal {
+
+#modal-textbox > #create-button-modal {
+  width: 250px;
   background-color: #e3ffde;
   border: none;
   box-shadow: 0px 2px 5px 0px #dedede;
   cursor: pointer;
   border-radius: 5px;
   padding: 1rem;
+  margin: 0 auto;
+  margin-top: 30px;
 }
-#modal-textbox > .submit-form > #create-button-modal:hover {
+#modal-textbox > #create-button-modal:hover {
   background-color: #cefdc6;
 }
-#modal-textbox > .submit-form > #create-button-modal:active {
+#modal-textbox > #create-button-modal:active {
   background-color: #daffd3;
 }
 .modal-top-section {
@@ -179,6 +183,9 @@ header {
 /* TABLE HEADING ACTIONS */
 thead > tr > th {
   cursor: pointer;
+  font-size: 16px;
+  padding-bottom: 5px;
+  text-decoration: underline;
 }
 thead > tr > th > i {
   font-size: 12px;
@@ -188,4 +195,13 @@ thead > tr > th > i {
 }
 thead > tr > th:hover i {
   opacity: 1;
+}
+tbody > tr {
+  border-radius: 10px;
+  background-color: #f6f6f6;
+}
+tbody > tr > td {
+  padding: 0.8rem 0;
+  vertical-align: bottom;
+  text-align: center;
 }
